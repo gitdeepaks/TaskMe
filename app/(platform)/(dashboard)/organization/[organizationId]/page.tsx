@@ -1,20 +1,19 @@
-"use client";
-
+import { db } from "@/lib/db";
 import React from "react";
+import Board from "./board";
+import Form from "./form";
 
-const OrganizationIdPage = () => {
-  console.log("I am looged in the browser");
+const OrganizationIdPage = async () => {
+  const boards = await db.board.findMany();
   return (
-    <div>
-      <form>
-        <input
-          id="title"
-          name="title"
-          required
-          placeholder="Enter a border title"
-          className="border-black border p-1"
-        />
-      </form>
+    <div className="flex flex-col space-y-4">
+      <Form />
+
+      <div className="space-y-2">
+        {boards.map((board) => (
+          <Board key={board.id} title={board.title} id={board.id} />
+        ))}
+      </div>
     </div>
   );
 };

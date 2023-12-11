@@ -18,12 +18,12 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 
   const { title, image } = data;
 
-  const [imageId, imageThubUrl, imageLinkHTML, imageUserName, imageFullUrl] =
+  const [imageId, imageThumbUrl, imageLinkHTML, imageUserName, imageFullUrl] =
     image.split("|");
 
   console.log([
     imageId,
-    imageThubUrl,
+    imageThumbUrl,
     imageLinkHTML,
     imageUserName,
     imageFullUrl,
@@ -31,7 +31,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 
   if (
     !imageId ||
-    !imageThubUrl ||
+    !imageThumbUrl ||
     !imageLinkHTML ||
     !imageUserName ||
     !imageFullUrl
@@ -49,7 +49,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
         title,
         orgId,
         imageId,
-        imageThubUrl,
+        imageThumbUrl,
         imageLinkHTML,
         imageUserName,
         imageFullUrl,

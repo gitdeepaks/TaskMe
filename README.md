@@ -2,7 +2,7 @@
 
 ## Key Features:
 
-- Auth
+- Auth usnig clerk
 - Organizations / Workspaces
 - Board creation
 - Unsplash API for random - beautiful cover images

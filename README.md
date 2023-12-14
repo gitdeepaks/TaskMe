@@ -1,5 +1,7 @@
 # Fullstack TaskMe: Next.js 14, Server Actions, React, Prisma, Stripe, Tailwind, MySQL
 
+# Please do check ir out at: https://task-me-seven.vercel.app/
+
 ## Key Features:
 
 - Auth usnig clerk

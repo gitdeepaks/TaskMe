@@ -9,7 +9,7 @@ import { Description } from "./description";
 import { Actions } from "./actions";
 import { AuditLog } from "@prisma/client";
 
-const CardModal = () => {
+export const CardModal = () => {
   const id = useCardModal((state) => state.id);
   const isOpen = useCardModal((state) => state.isOpen);
   const onClose = useCardModal((state) => state.onClose);
@@ -42,5 +42,3 @@ const CardModal = () => {
     </Dialog>
   );
 };
-
-export default CardModal;
